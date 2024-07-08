@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Loops</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .item {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #000;
+            /background: brown;
+            cursor: pointer;
+        }
+
+        .item.active,
+        .item:hover {
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item active">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+
+    <script type="text/javascript">
+        /document.querySelector('.item');
+        / array
+        var itemEls = document.querySelectorAll('.item');
+
+        //Iterate 
+        for (var i = 0; i < itemEls.length; i++) {
+            var thisItem = itemEls[i];
+            console.log(itemEls[i]);
+
+            thisItem.addEventListener('click', function () {
+                console.log(this);
+
+                for (var j = 0; j < itemEls.length; j++) {
+                    thisItem[j].classList.remove('active');
+                };
+
+                console.log('this');
+                var clickedEl = this;
+                clickedEl.classList.add('active');
+            });
+        }
+    </script>
+</body>
+
+</html>

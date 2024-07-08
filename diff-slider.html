@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Diff Slider Example</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css" />
+
+
+</head>
+
+<body>
+    <main>
+        <img-comparison-slider value="25">
+            <img slot="first" src="images/out256_00_00.jpg" />
+            <img slot="second" src="images/out256_00_01.jpg" />
+        </img-comparison-slider>
+    </main>
+
+    <style type="text/css">
+        img-comparison-slider {
+          --divider-width: 2px;
+          --divider-color: #c0c0c0;
+          --default-handle-opacity: 0.3;
+        }
+      </style>
+</body>
+
+</html>
